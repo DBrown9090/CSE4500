@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include 'head.php' 
+<?php include 'head.php';
   
   $json_file = file_get_contents('my_data.json');
   $json_data = json_decode($json_file, true);
@@ -22,7 +22,7 @@
     <div data-bs-offset="0" tabindex="0">
       <div id="about" class="content-item">
         <div class="vertical-center">
-          <h1><?php echo $json_data['first-name'], '<span class="text-primary">', $json_data['last_name'];, '</span>' ?></h1>
+          <h1><?php echo $json_data['first-name'], ' <span class="text-primary">', $json_data['last-name'], '</span>'; ?></h1>
           <div class="subheading">
             <?php echo $json_data['address'], ' - ', $json_data['phone'], ' - ', $json_data['email']; ?>
           </div>
@@ -38,6 +38,7 @@
               <div class="flex-grow-1">
                 <h3 class="mb-0"><?php echo $experience['title']; ?></h3>
                 <div class="subheading mb-3"><?php echo $experience['uni']; ?></div>
+				<p><?php echo $experience['description']; ?></p>
               </div>
               <div class="flex-shrink-0">
                 <span class="text-primary"><?php echo $experience['period']; ?></span>

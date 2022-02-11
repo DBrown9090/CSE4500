@@ -4,12 +4,13 @@
   "address": "5500 University Pkwy, San Bernardino, CA 92407",
   "phone": "(123)456-7890",
   "email": "name@mail.com",
-  "introduction": "A introduction of youself ...",
+  "introduction": "This introduces me! I think...",
   "education":[
     {
       "title":"BS in Computer Science",
       "uni":"CSUSB",
-      "period":"2022"
+      "period":"2022",
+	  "description":"I probably did some schooling between before then, and then."
     }
     ],
   "experience":[
