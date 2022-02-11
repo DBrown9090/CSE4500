@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include 'head.php' ?>
+<?php include 'head.php' 
+  
+  $json_file = file_get_contents('my_data.json');
+  $json_data = json_decode($json_file, true);
+  
+  
+  ?>
   <body data-bs-spy="scroll" data-bs-target="#navbar-example3" style="position:relative" >
     <div class="left-nav">
       <nav id="navbar-example3" class="navbar vertical-center flex-column center">
@@ -16,39 +22,60 @@
     <div data-bs-offset="0" tabindex="0">
       <div id="about" class="content-item">
         <div class="vertical-center">
-          <h1>David Brown</h1>
+          <h1><?php echo $json_data['first-name'], '<span class="text-primary">', $json_data['last_name'];, '</span>' ?></h1>
           <div class="subheading">
-            5500 University Pkwy, San Bernardino, CA 92407 · (123)456-7890
+            <?php echo $json_data['address'], ' - ', $json_data['phone'], ' - ', $json_data['email']; ?>
           </div>
-          <p>...</p>
+          <p><?php echo $json_data['introduction']; ?></p>
         </div>
       </div>
       <hr>
       <div id="education" class="content-item">
         <div class="vertical-center">
           <h4>Education</h4>
-          <p>...</p>
+          <?php foreach($json_data['education'] AS $experience) { ?>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0"><?php echo $experience['title']; ?></h3>
+                <div class="subheading mb-3"><?php echo $experience['uni']; ?></div>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary"><?php echo $experience['period']; ?></span>
+              </div>
+            </div>
+          <?php  } ?>
         </div>
       </div>
       <hr>
       <div id="experience" class="content-item">
         <div class="vertical-center">
           <h4>Experience</h4>
-          <p>...</p>
+          <?php foreach($json_data['experience'] AS $experience) { ?>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0"><?php echo $experience['title']; ?></h3>
+                <div class="subheading mb-3"><?php echo $experience['employer']; ?></div>
+                <p><?php echo $experience['description']; ?></p>
+              </div>
+              <div class="flex-shrink-0">
+                <span class="text-primary"><?php echo $experience['period']; ?></span>
+              </div>
+            </div>
+          <?php  } ?>
         </div>
       </div>
       <hr>
       <div id="skills" class="content-item">
         <div class="vertical-center">
           <h4>Skills</h4>
-          <p>...</p>
+          <p><?php echo $json_data['skills']; ?></p>
         </div>
       </div>
       <hr>
       <div id="interests" class="content-item">
         <div class="vertical-center">
           <h4>Interests</h4>
-          <p>...</p>
+          <p><?php echo $json_data['interests']; ?></p>
         </div>
       </div>
       <hr>
