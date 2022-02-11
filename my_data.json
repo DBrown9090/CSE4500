@@ -5,6 +5,13 @@
   "phone": "(123)456-7890",
   "email": "name@mail.com",
   "introduction": "A introduction of youself ...",
+  "education":[
+    {
+      "title":"BS in Computer Science",
+      "uni":"CSUSB",
+      "period":"2022"
+    }
+    ],
   "experience":[
     {
       "title":"WEB DEVELOPER",
@@ -18,5 +25,7 @@
       "period":"March 2018 - 2021",
       "description":"A description of your experience with this job."
     }
-  ]
+  ],
+  "skills":"Reading, Riting, Rithmatic",
+  "interests":"butching, baking, candlestick-making"
 }
