@@ -8,6 +8,8 @@
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#education">Education</a>
           <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#skills">Education</a>
+          <a class="nav-link" href="#interests">Experience</a>
         </nav>
       </nav>
     </div>
@@ -32,6 +34,20 @@
       <div id="experience" class="content-item">
         <div class="vertical-center">
           <h4>Experience</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <hr>
+      <div id="skills" class="content-item">
+        <div class="vertical-center">
+          <h4>Skills</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <hr>
+      <div id="interests" class="content-item">
+        <div class="vertical-center">
+          <h4>Interests</h4>
           <p>...</p>
         </div>
       </div>
